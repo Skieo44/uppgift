@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    background: var(--background);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+}
+
+.header{
+    background: #101017;
+    height: 60px;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav{
+    height: 100%;
+    display : flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 32px;
+}
+
+.upcoming-bar{
+    background: #ccccdb;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+}
+
+.clock{
+   text-align: center;
+   align-items: center;
+}

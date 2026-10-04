@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FormulaTracker</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a class="logo" href="index.html">FormulaTracker</a>
+        
+
+            <a class="nav-link" href="schedule.html">Schedule</a>
+            <a class="nav-link" href="standings.html">Standings</a>
+            
+
+            <div class="nav-spacer"></div>
+        </nav>
+    </header>
+
+    <section class="upcoming-bar">
+        <div class="session-info">
+            <h2>Upcoming Session</h2>
+            <p id="session-name"></p>
+            <div class="clock" id="clock1">
+                <div data-value="days"</div>
+                <div data-value="hours"></div>
+                <div data-value="minutes"></div>
+                <div data-value="seconds"></div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="calendar" class="calendar">
+            <h2>Race Calendar</h2>
+            <div id="calendar-container" class="calendar-container">
+               
+            </div>
+    </main>
+
+
+    <script src="script/countdown.js"> </script>
+    <script src="script/script.js"> </script>
+    <script src="script/calendar.js"> </script>
+</body>
+</html>
