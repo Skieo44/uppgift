@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <title>FormulaTracker</title>
 </head>
 <body>
     <header class="header">
         <nav class="nav">
-            <a class="logo" href="index.html">FormulaTracker</a>
+            <a id="logo" href="index.html">FormulaTracker</a>
         
 
-            <a class="nav-link" href="schedule.html">Schedule</a>
-            <a class="nav-link" href="standings.html">Standings</a>
+            <a id="nav-link" href="schedule.html">Schedule</a>
+            <a id="nav-link" href="standings.html">Standings</a>
             
 
             <div class="nav-spacer"></div>
@@ -23,7 +26,7 @@
     <section class="upcoming-bar">
         <div class="session-info">
             <h1>Upcoming Session</h1>
-            <p id="session-name"></p>
+            <p id="session-name"> Singapore Free Practice 1</p>
             <div class="clock" id="clock1">
                 <div data-value="days"> </div>
                 <div data-value="hours"> </div>
@@ -38,6 +41,14 @@
             <h2>Race Calendar</h2>
             <div id="calendar-card" class="calendar-card">
                 <div class="calendar-container">
+                    <h3 id="race-name">Race Name</h3>
+                    <p id="race-date">Race Date</p>
+                </div>
+                  <div class="calendar-container">
+                    <h3 id="race-name">Race Name</h3>
+                    <p id="race-date">Race Date</p>
+                </div>
+                  <div class="calendar-container">
                     <h3 id="race-name">Race Name</h3>
                     <p id="race-date">Race Date</p>
                 </div>

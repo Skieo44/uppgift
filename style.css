@@ -1,33 +1,53 @@
+* {
+  box-sizing: border-box;
+  color: #131212;
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+}
 body{
     margin: 0;
     background: var(--background);
-    color: var(--text-color);
-    font-family: 'Arial', sans-serif;
 }
 
 .header{
-    background: #101017;
+    background: #151040;
     height: 60px;
     padding: 20px;
     text-align: center;
 }
 
+
 .nav{
     height: 100%;
     display : flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 40px;
     padding: 0 32px;
+}
+#logo{
+   color: white;
+
+   display: flex;
+  justify-content: space-between;
+}
+#nav-link{
+    color: white;
 }
 
 .upcoming-bar{
     background: #ccccdb;
-    height: 60px;
+    height: 100%;
 
     display: flex;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
 
-
+#session-name{
+   flex: display;
+   align-items: flex-start;
 }
 
 .clock{
@@ -36,11 +56,10 @@ body{
    display: flex;
    justify-content: space-around;
    flex-direction: row;
-
    flex: grow;
 }
 
-.calendar-card{
+#calendar-card{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 
@@ -48,10 +67,6 @@ body{
 }
 
 .calendar-container{
-     width: 20px;
     display: flex;
     flex-direction: column;
-    padding: 2px 16px;
-
-   
 }
