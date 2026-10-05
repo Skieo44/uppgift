@@ -3,3 +3,6 @@ const timer1 = new countdownTimer({
     targetDate: new Date('October, 11 2026 14:00:00')
 })
 timer1.startTimer();
+
+const session = document.getElementById("session-name");
+

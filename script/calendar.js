@@ -1,5 +1,35 @@
 console.log("hello");
 
+const drivers = [
+  ["VER", "Max Verstappen"],
+  ["ANT", "Kimi Antonelli"],
+  ["HAM", "Lewis Hamilton"],
+  ["LEC", "Charles Leclerc"],
+  ["HAD", "Isack Hadjar"],
+  ["PIA", "Oscar Piastri"],
+  ["LAW", "Liam Lawson"],
+  ["ALO", "Fernando Alonso"],
+  ["NOR", "Lando Norris"],
+  ["LIN", "Nicholas Latifi"],
+  ["HUL", "Nico Hulkenberg"],
+  ["STR", "Lance Stroll"]
+];
+
+const sessions = [
+  {
+    name: "Practice 1",
+    time: "09:00 - 10:30"
+  },
+  {
+    name: "Practice 2",
+    time: "11:00 - 12:30"
+  },
+  {
+    name: "Qualifying",
+    time: "13:00 - 14:30"
+  }
+];
+
 const races = [
 {
     round: 1,
@@ -50,20 +80,6 @@ const races = [
 }
 ];
 
-const drivers = [
-  ["VER", "Max Verstappen"],
-  ["ANT", "Kimi Antonelli"],
-  ["HAM", "Lewis Hamilton"],
-  ["LEC", "Charles Leclerc"],
-  ["HAD", "Isack Hadjar"],
-  ["PIA", "Oscar Piastri"],
-  ["LAW", "Liam Lawson"],
-  ["ALO", "Fernando Alonso"],
-  ["NOR", "Lando Norris"],
-  ["LIN", "Nicholas Latifi"],
-  ["HUL", "Nico Hulkenberg"],
-  ["STR", "Lance Stroll"]
-];
 
 const calendar = document.getElementById("calendar");
 
@@ -78,4 +94,3 @@ function createRaceCard(race) {
         `;
     }  
 }
-

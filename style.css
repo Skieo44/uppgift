@@ -26,9 +26,32 @@ body{
 
     display: flex;
     align-items: center;
+
+
 }
 
 .clock{
    text-align: center;
-   align-items: center;
+
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+
+   flex: grow;
+}
+
+.calendar-card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    background: #615d5d;
+}
+
+.calendar-container{
+     width: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 2px 16px;
+
+   
 }
