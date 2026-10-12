@@ -1,5 +1,12 @@
 console.log("Hello111");
 
+
+const driverList = document.getElementById("driver-list");
+const teamList = document.getElementById("team-list");
+
+
+
+
 const teams = [
     {
         tName: "Mercedes",
@@ -47,133 +54,149 @@ const teams = [
     },
 ];
 
-
-
-
-
-
-
-
 const drivers = [
     {
         name: "Kimi Antonelli",
+        sName: "ANT",
         team: "Mercedes",
         points: 381
     },
     {
         name: "George Russell",
+        sName: "RUS",
         team: "Mercedes",
         points: 366
     },
       {
         name: "Lewis Hamilton",
+        sName: "HAM",
         team: "Ferrari",
         points: 390
     },
     {
         name: "Max Verstappen",
+        sName: "VER",
         team: "Red Bull",
         points: 381
     },
     {
         name: "Charles Leclerc",
+        sName: "LEC",
         team: "Ferrari",
         points: 366
     },
       {
         name: "Lando Norris",
+        sName: "NOR",
         team: "McLaren",
         points: 390
     },
     {
         name: "Oscar Piastri",
+        sName: "PIA",
         team: "McLaren",
         points: 381
     },
     {
         name: "Isack Hadjar",
+        sName: "HAD",
         team: "Redbull",
         points: 366
     },
       {
         name: "Liam Lawson",
+        sName: "LAW",
         team: "Racing Bulls",
         points: 390
     },
       {
         name: "Pierre Gasly",
+        sName: "GAS",
         team: "Alpine",
         points: 390
     },
       {
         name: "Arvid Lindblad",
+        sName: "LIN",
         team: "Racing Bulls",
         points: 390
     },
     {
         name: "Franco Colapinto",
+        sName: "COL",
         team: "Alpine",
         points: 381
     },
     {
         name: "Oliver Bearman",
+        sName: "BEA",
         team: "Haas F1 Team",
         points: 366
     },
       {
         name: "Nico Hulkenberg",
+        sName: "HUL",
         team: "Audi",
         points: 390
     },
     {
         name: "Gabriel Bortoleto",
+        sName: "BOR",
         team: "Audi",
         points: 381
     },
     {
         name: "Esteban Ocon",
+        sName: "OCO",
         team: "Haas F1 Team",
         points: 366
     },
       {
         name: "Fernando Alonso",
+        sName: "ALO",
         team: "Aston Martin",
         points: 390
     },
     {
         name: "Carlos Sainz",
+        sName: "SAI",
         team: "Williams",
         points: 381
     },
     {
         name: "Alexander Albon",
+        sName: "ALB",
         team: "Williams",
         points: 366
     },
       {
         name: "Yuki Tsunoda",
+        sName: "TSU",
         team: "Racing Bulls",
         points: 390
     },
     {
         name: "Lance Stroll",
+        sName: "STR",
         team: "Aston Martin",
         points: 366
     },
     {
         name: "Sergio Perez",
+        sName: "PER",
         team: "Cadillac",
         points: 381
     },
      {
         name: "Valtteri Bottas",
+        sName: "BOT",
         team: "Cadillac",
         points: 366
     },
 ];
 
-const driverList = document.getElementById("driver-list");
-const teamList = document.getElementById("team-list");
+
+
 
 for (let i = 0; i < drivers.length; i++) {
     const driver = drivers[i];
@@ -183,7 +206,9 @@ for (let i = 0; i < drivers.length; i++) {
 
     listItem.innerHTML = `
        
-
+        <div class="short-name">
+            <span class="short-name" >${driver.sName}</span>
+        </div>
         <div class="driver-info">
             <span class="driver-name">${driver.name}</span>
             <span class="team">${driver.team}</span>
@@ -216,3 +241,8 @@ for(let i = 0; i < teams.length; i++) {
     console.log("hoo pineapple");
 }
 
+const button = document.getElementById("drpbtn").addEventListener("click", test);
+
+function test(){
+    alert("hello");
+}

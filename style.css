@@ -6,9 +6,10 @@
 }
 
 main{
-    padding-left: 350px;
-    padding-right: 350px;
-    padding-bottom: 70px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px 70px;
 }
 
 body{
@@ -63,8 +64,9 @@ span{
 
 .upcoming-bar{
     position: relative;
-    height: 300px;
     min-height: 0px;
+    width: 100%;
+    height: 300px;
 
     display: flex;
     align-items: center;
@@ -75,8 +77,6 @@ span{
     padding:0%;
 
     font-size: 1.7rem;
-
-  
 
     overflow: hidden;
 }
@@ -97,16 +97,21 @@ span{
     color: white;
 }
 
+#session-info{
+    width: 100%;
+    padding: 0 16px;
+}
+
 #session-name{
    color: white;
 }
 
 .clock{
     display: flex;
-   text-align: center;
    font-size: 2rem;
     margin-top: 30px;
-   justify-content: space-around;
+   justify-content: center;
+   gap: 150px;
    flex-direction: row;
    
 
@@ -117,7 +122,7 @@ span{
 #calendar-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 10px;
+    
     
     height: 100%;
     grid-gap: 50px;
@@ -130,6 +135,8 @@ span{
     flex-direction: column;
     box-shadow: rgba(97, 96, 96, 0.25) 0px 54px 55px, rgba(143, 141, 141, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 8px; 
+
+    min-width: 0;
     width: 100%;
     height: 100%;
     padding: 20px;
@@ -158,8 +165,9 @@ span{
 .location{
     text-align: center;
     margin-top: 80px;
+    margin-bottom: 0;
     margin-right: 20px;
-    font-size: 3.8rem;
+    font-size: clamp(2rem, 4vw, 3.8rem);
     overflow: auto;
 }
 
@@ -189,7 +197,6 @@ h2{
     justify-content: center;
     gap: 10px;
     height: 60px;
-    margin-top: -60px;
     text-align: center;
     color: white;
 }
@@ -215,12 +222,13 @@ h2{
     
     flex-direction: column;
     margin:  auto;
-    align-self: st;
+    justify-content: center;
     
 
     background: #c0bfbf;
     border-radius: 10px; 
-    width: 50%;
+    width: 100%;
+    height: 40%;
 }
 
 .team-standings-container{
@@ -228,12 +236,11 @@ h2{
     
     flex-direction: column;
     margin:  auto;
-    align-self: st;
     
 
     background: #c0bfbf;
     border-radius: 10px; 
-    width: 50%;
+    width: 50%;   
 }
 
 .driver-row{
@@ -255,10 +262,44 @@ h2{
     align-items: center;
 }
 
-.team.row{
-    
+.dropdown button{
+    background: #000000;
+    color: white;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 18px;
 }
 
+.dropdown button:hover{
+    background: #a09e9e54;
+}
+
+.dropdown a{
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: darkgray;
+}
+
+.container{
+    margin: auto;
+    margin-top: -25px;
+    margin-bottom: 20px;
+    background: #000000;
+    height: 100px;
+    width: 60%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.short-name{
+    display: none;
+}
 
 
 
@@ -273,17 +314,44 @@ h2{
     #calendar-container {
         grid-template-columns: repeat(auto-fit);
     }
+
+    main{
+        margin:auto;
+    }
 }
 
-@media (max-width: 300px) {
+@media  (max-width: 650px) {
+
+    main{
+       
+    }
+
+   
+
     #calendar-container {
         grid-template-columns: 1fr;
+        padding: auto;
     }
 
     #header{
         min-height: 100px;
         height: 100px;
         padding: 15px;
+        width: 100%;
+        width: 1000px;
+    }
+
+    .driver-name{
+        display: none;
+    }
+
+    .team{
+        display: none;
+    }
+
+    .short-name{
+        display: block;
+
     }
 
     .nav{
@@ -299,18 +367,21 @@ h2{
     }  
     
     .location{
-        font-size: 2rem;
+          font-size: clamp(2rem, 4vw, 3.8rem);
     }
 
     .upcoming-bar{
         width: 100%;
         min-height: 300px;
-        height: 300px;
+        height: 100%;
+        width: 1000px;
     }
 
     .footer-bar {
-        min-height: 100px;
-        height: 100px;
+        min-height: 500px;
+        height: 100%;
+        width: 100%;
+        width: 1000px;
     }
 
     span{
@@ -324,4 +395,5 @@ h2{
 
     .standings-container{}
 }
+
 
