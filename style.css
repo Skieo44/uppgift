@@ -320,13 +320,15 @@ h2{
     }
 }
 
-@media  (max-width: 650px) {
+@media  (max-width: 600px) {
 
-    main{
-       
+    html, body {
+    overflow-x: hidden;
     }
-
-   
+    body {
+    position: relative
+    }
+    
 
     #calendar-container {
         grid-template-columns: 1fr;
@@ -334,11 +336,20 @@ h2{
     }
 
     #header{
+        display: flex;
+        flex: 0 1;
         min-height: 100px;
         height: 100px;
         padding: 15px;
         width: 100%;
-        width: 1000px;
+    }
+
+    .driver-standings-container{
+        display: flex;
+        flex: 0 1;
+        justify-content: center;
+        padding: auto;
+        
     }
 
     .driver-name{
@@ -356,10 +367,13 @@ h2{
 
     .nav{
         gap: 15px;
+         display: flex;
+        flex-direction: row;
     }
 
     .nav-link{
         font-size: 2rem;
+       
     }
        
     #logo{
@@ -371,29 +385,34 @@ h2{
     }
 
     .upcoming-bar{
+        display: flex;
+        flex: 0 1;
         width: 100%;
         min-height: 300px;
         height: 100%;
-        width: 1000px;
+      
     }
 
     .footer-bar {
         min-height: 500px;
         height: 100%;
         width: 100%;
-        width: 1000px;
+        width: 100vw;
+    }
+    
+    .clock{
+        flex-direction: row;
+        flex-shrink: 1;
+        justify-content: center;
+        margin: 15px;
     }
 
-    span{
-        font-size: 24px;
-    }
+
 
     h2{
         font-size: 2rem;
         margin: 20px 0;
     }
-
-    .standings-container{}
 }
 
 
