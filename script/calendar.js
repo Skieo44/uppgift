@@ -1,4 +1,4 @@
-console.log("hello");
+
 
 const drivers = [
   ["VER", "Max Verstappen"],

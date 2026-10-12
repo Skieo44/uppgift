@@ -6,13 +6,19 @@ const timer1 = new countdownTimer({
 })
 timer1.startTimer();
 
-const button = document.getElementById("button");
+const cards = document.getElementByAll(".card-content");
 
-button.addEventListener("click", testFunc);
+cards.forEach(function(card) {
+    card.addEventListener("click", function() {
+        const details = card.querySelector(".race-details");
 
-function testFunc(){
-    alert("press");
- 
-}
-
-
+        if (details.hidden) {
+            details.hidden = false;
+            alert("good morning");
+        } else {
+            details.hidden = true;
+            alert("goodnight");
+        }
+        alert("wowza!");
+    });
+});
