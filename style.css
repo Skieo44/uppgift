@@ -196,19 +196,15 @@ img{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     
-    
     height: 100%;
     grid-gap: 50px;
-   
-
 }
 
 .card-content{
     display: flex;
     flex-direction: column;
     box-shadow: rgba(97, 96, 96, 0.25) 0px 54px 55px, rgba(143, 141, 141, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 8px; 
-
+    border-radius: 8px;
     min-width: 0;
     width: 100%;
     height: 100%;
@@ -223,8 +219,6 @@ img{
     object-fit: cover;
     margin: 12px auto 0;
     border-radius: 4px;
-    
-   
 }
 
 .card-content:hover{
@@ -248,10 +242,11 @@ img{
 }
 
 .location{
+    position: relative;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 0;
-    margin-left: 1.1vw;
+  
     font-size: clamp(2rem, 4vw, 3.8rem);
     overflow: auto;
 }
@@ -348,15 +343,6 @@ img{
    
 }
 
-@media (max-width: 900px) {
-
-    main{
-        margin:auto;
-    }
-
-    
-}
-
 @media  (max-width: 600px) {
 
     html, body {
@@ -380,19 +366,7 @@ img{
         padding: 15px;
         width: 100%;
     }
-    
-    .driver-name{
-        display: none;
-    }
 
-    .team{
-        display: none;
-    }
-
-    .short-name{
-        display: block;
-
-    }
 
     .nav-link{
         font-size: 1rem;
