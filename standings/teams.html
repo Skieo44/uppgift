@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Standings</title>
+</head>
+
+<body>
+ <header id="header"></header>
+    <main>
+        <section class="standings">
+        <div class="standings-header">
+             <h1>Standings</h1>
+             <nav class="standings-nav">
+                <a class="nav-link" href="drivers.html">Drivers'</a>
+                <a class="nav-link" href="teams.html">Teams'</a>
+             </nav>
+        </div>
+        <div class="team-standings-container">
+            <table id="team-table">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Team</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="team-list">
+                </tbody>
+             </table>
+        </div>
+    </section>
+    </main>
+  
+    <div class="footer-container">
+         <footer id="footer"></footer>
+    </div>
+    <script src="../script/header.js"></script>
+    <script src="../script/standings.js"></script>
+</body>
+</html>

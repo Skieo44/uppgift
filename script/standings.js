@@ -1,4 +1,5 @@
 console.log("Hello111");
+console.log(window.innerWidth)
 
 
 const driverList = document.getElementById("driver-list");
@@ -6,210 +7,206 @@ const teamList = document.getElementById("team-list");
 
 
 // Array used to store all the neccesary values for the standings page
-const drivers = [
+const driverInfo = [
     {
         name: "Kimi Antonelli",
         sName: "ANT",
         team: "Mercedes",
-        tPoints: 578,
-        points: 381
+        points: 340
     },
     {
         name: "George Russell",
         sName: "RUS",
         team: "Mercedes",
-        tPoints: 578,
-        points: 366
+        points: 238
     },
       {
         name: "Lewis Hamilton",
         sName: "HAM",
         team: "Ferrari",
-        tPoints: 444,
-        points: 390
+        points: 229
     },
     {
         name: "Max Verstappen",
         sName: "VER",
         team: "Red Bull",
-        tPoints: 332,
-        points: 381
+        points: 221
     },
     {
         name: "Charles Leclerc",
         sName: "LEC",
         team: "Ferrari",
-        tPoints: 444,
-        points: 366
+        points: 215
     },
       {
         name: "Lando Norris",
         sName: "NOR",
         team: "McLaren",
-        tPoints: 339,
-        points: 390
+        points: 201
     },
     {
         name: "Oscar Piastri",
         sName: "PIA",
         team: "McLaren",
-        tPoints: 339,
-        points: 381
+        points: 138
     },
     {
         name: "Isack Hadjar",
         sName: "HAD",
         team: "Red Bull",
-        tPoints: 332,
-        points: 366
+        points: 97
     },
       {
         name: "Liam Lawson",
         sName: "LAW",
         team: "Racing Bulls",
-        tPoints: 100,
-        points: 390
+        points: 75
     },
       {
         name: "Pierre Gasly",
         sName: "GAS",
         team: "Alpine",
-        tPoints: 68,
-        points: 390
+        points: 41
     },
       {
         name: "Arvid Lindblad",
         sName: "LIN",
         team: "Racing Bulls",
-        tPoints: 100,
-        points: 390
+        points: 38
     },
     {
         name: "Franco Colapinto",
         sName: "COL",
         team: "Alpine",
-        tPoints: 68,
-        points: 381
+        points: 27
     },
     {
         name: "Oliver Bearman",
         sName: "BEA",
         team: "Haas F1 Team",
-        tPoints: 30,
-        points: 366
+        points: 23
     },
       {
         name: "Nico Hulkenberg",
         sName: "HUL",
         team: "Audi",
-        tPoints: 23,
-        points: 390
+        points: 13
     },
     {
         name: "Gabriel Bortoleto",
         sName: "BOR",
         team: "Audi",
-        tPoints: 23,
-        points: 381
+        points: 10
     },
     {
         name: "Esteban Ocon",
         sName: "OCO",
         team: "Haas F1 Team",
-        tPoints: 30,
-        points: 366
+        points: 7
     },
       {
         name: "Fernando Alonso",
         sName: "ALO",
         team: "Aston Martin",
-        tPoints: 7,
-        points: 390
+        points: 7
     },
     {
         name: "Carlos Sainz",
         sName: "SAI",
         team: "Williams",
-        tPoints: 12,
-        points: 381
+        points: 7
     },
     {
         name: "Alexander Albon",
         sName: "ALB",
         team: "Williams",
-        tPoints: 12,
-        points: 366
+        points: 5
     },
       {
         name: "Yuki Tsunoda",
         sName: "TSU",
         team: "Racing Bulls",
-        tPoints: 100,
-        points: 390
+        points: 1
     },
     {
         name: "Lance Stroll",
         sName: "STR",
         team: "Aston Martin",
-        tPoints: 7,
-        points: 366
+        points: 0
     },
     {
         name: "Sergio Perez",
         sName: "PER",
         team: "Cadillac",
-        tPoints: 0,
-        points: 381
+        points: 0
     },
      {
         name: "Valtteri Bottas",
         sName: "BOT",
         team: "Cadillac",
-        tPoints: 0,
-        points: 366
+        points: 0
     }
 ];
 
+const teams = [
+    { name: "Mercedes", points: 578 },
+    { name: "Ferrari", points: 444 },
+    { name: "McLaren", points: 339 },
+    { name: "Red Bull", points: 332 },
+    { name: "Racing Bulls", points: 100 },
+    { name: "Alpine", points: 68 },
+    { name: "Haas F1 Team", points: 30 },
+    { name: "Audi", points: 23 },
+    { name: "Williams", points: 12 },
+    { name: "Aston Martin", points: 7 },
+    { name: "Cadillac", points: 0 }
+];
+    
 
+// Gave an error so the teams table wouldn't load, this ignores the driverslist if its null.
+if(driverList == null){
+    
+// For-loop which generates and updates the standings table for the constructors' standings
+    for (let i = 0; i < teams.length; i++) {
+        const team = teams[i];
+        console.log("hellodad")
+        const row = document.createElement("tr");
 
-// For-loop which generates and updates the standings table for the drivers' standings
-for (let i = 0; i < drivers.length; i++) {
-    const driver = drivers[i];
+        row.innerHTML = `
+           <td>${i + 1}</td>
+           <td>${team.name}</td>
+           <td>${team.points}</td>
+        `;
+
+        teamList.appendChild(row);
+  
+  }
+}else{
+    // For-loop which generates and updates the standings table for the drivers' standings
+for (let i = 0; i < driverInfo.length; i++) {
+    const driver = driverInfo[i];
 
     
     const row = document.createElement("tr");
 
-    row.innerHTML = `
+
+    if(window.screen.width <= 600){
+        row.innerHTML = `
+        <td>${i + 1}</td>
+        <td>${driver.sName}</td>
+        <td>${driver.team}</td>
+        <td>${driver.points}</td>
+    `;
+    }else{
+        row.innerHTML = `
         <td>${i + 1}</td>
         <td>${driver.name}</td>
         <td>${driver.team}</td>
         <td>${driver.points}</td>
     `;
+    }
 
     driverList.appendChild(row);
 }
-
-// For-loop which generates and updates the standings table for the constructors' standings
-    for (let i = 0; i < teams.length; i++) {
-        const team = drivers[i];
-        const teamDriver = drivers.find(driver => driver.team === team.tName);
-
-        const listItem = document.createElement("li");
-        listItem.classList.add("team-row");
-
-        listItem.innerHTML = `
-            <div class="team-info">
-                <span class="team-name">${team.tName}</span>
-            </div>
-
-            <span class="points">${teamDriver.tPoints} PTS</span>
-        `;
-
-        teamList.appendChild(listItem);
-    }
-
-const button = document.getElementById("drpbtn").addEventListener("click", test);
-
-function test(){
-    alert("hello");
 }
+
