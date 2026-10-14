@@ -2,11 +2,12 @@
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
     text-decoration: none;
-    
+    margin: 0;
+    padding: 0;
 }
 
 main{
-    width: 100%;
+  
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px 70px;
@@ -30,6 +31,7 @@ span{
 
 #header{
     display: flex;
+    flex-direction: row;
     background: #000000;
     height: 100px;
     padding: 20px;
@@ -37,31 +39,30 @@ span{
     gap: 50px;
 }
 
-.nav{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 40px;
-    padding: 0 32px;
-    
-}
+
 
 #logo{
    color: white;
    display: flex;
-  justify-content: space-between;
+
    text-shadow: 5px 5px 5px #000000;
    font-size: 2.5rem;
 }
 
-.nav-link{
+ .nav-link{
+    display: flex;
+    flex-direction: row;
     color: white;
     text-shadow: 5px 5px 5px #000000;
-    font-size: 1.5rem;
-    margin-top: 12px;
+    font-size: 1.3rem;
+    margin-top: 15px;
+
+    transition: background-color 150ms ease;
 }
 
+.nav-link:hover{
+    border-bottom: 2px solid red;
+}
 .upcoming-bar{
     position: relative;
     min-height: 0px;
@@ -73,8 +74,8 @@ span{
     flex-direction: column;
     text-align: center;
 
-    margin: 0px;
-    padding:0%;
+    margin-top: auto;
+   
 
     font-size: 1.7rem;
 
@@ -100,6 +101,7 @@ span{
 #session-info{
     width: 100%;
     padding: 0 16px;
+    margin-top: 4vh;
 }
 
 #session-name{
@@ -108,10 +110,10 @@ span{
 
 .clock{
     display: flex;
-   font-size: 2rem;
-    margin-top: 30px;
+    font-size: 2rem;
+    margin-top: 2vh;
    justify-content: center;
-   gap: 150px;
+   gap: 6vw;
    flex-direction: row;
    
 
@@ -218,17 +220,7 @@ h2{
 }
 
 .driver-standings-container{
-    display: flex;
-    
-    flex-direction: column;
-    margin:  auto;
-    justify-content: center;
-    
-
-    background: #c0bfbf;
-    border-radius: 10px; 
-    width: 100%;
-    height: 40%;
+   min-height: 100%;
 }
 
 .team-standings-container{
@@ -243,14 +235,22 @@ h2{
     width: 50%;   
 }
 
-.driver-row{
-    display: flex;
-    list-style-type: none;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    margin: 10px;
-    margin-right: 50px;
-   
-   justify-content: space-between;
+#driver-table{
+    display: relative;
+    width: 50%;
+    height: 40%;
+    background: rgb(49, 49, 49);
+    z-index: 10;
+    border-radius: 9px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+#driver-table th, td{
+    padding: 10px;
+    background: rgb(49, 49, 49);    
+    
 }
 
 .driver-name{
@@ -286,6 +286,18 @@ h2{
     background-color: darkgray;
 }
 
+.short-name{
+    display: none;
+}
+
+.p1{
+    color: gold;
+}
+.p2{
+    color: silver;
+}
+.p3{color: rgb(202, 133, 5);}
+
 .container{
     margin: auto;
     margin-top: -25px;
@@ -295,10 +307,6 @@ h2{
     width: 60%;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-}
-
-.short-name{
-    display: none;
 }
 
 
@@ -318,6 +326,8 @@ h2{
     main{
         margin:auto;
     }
+
+    
 }
 
 @media  (max-width: 600px) {
@@ -365,14 +375,8 @@ h2{
 
     }
 
-    .nav{
-        gap: 15px;
-         display: flex;
-        flex-direction: row;
-    }
-
     .nav-link{
-        font-size: 2rem;
+        font-size: 1rem;
        
     }
        
@@ -403,10 +407,12 @@ h2{
     .clock{
         flex-direction: row;
         flex-shrink: 1;
-        justify-content: center;
-        margin: 15px;
     }
 
+    
+    #session-info{
+        margin-top: -0vh;
+    }
 
 
     h2{
