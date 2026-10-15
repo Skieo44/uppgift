@@ -86,6 +86,15 @@ img{
    margin-right: 1vw;
 }
 
+#short-logo{
+    display: none;
+    color: white;
+   display: flex;
+   text-shadow: 5px 5px 5px #000000;
+   font-size: 2.5rem;
+   margin-right: 1vw;
+}
+
 
 .nav-link{
     display: flex;
@@ -111,7 +120,7 @@ img{
 }
 
 .menu-toggle {
-    display: none; /* hidden on desktop */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -446,4 +455,12 @@ img{
     }
 }
 
+@media (max-width:300px){
 
+    .standings-header{
+        font-size: 0.8rem;
+    }
+
+    
+    
+}
