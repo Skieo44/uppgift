@@ -1,13 +1,13 @@
 # Formula Tracker
 
 ## Om sidan
-Sidan ska vara en typ av "tracker", alltså en sida där du hålla koll på alla/pågående formel 1 loppen och vart alla förare och lag ligger till.
+Sidan ska vara en typ av "tracker", alltså en sida där du kan hålla koll på alla formel 1 loppen och vart alla förare och lag ligger till.
 
 ## Skiss
-Jag har tagit inspiration från F1 officiella kalender sida men har även skapat en AI version med hjälp av figma. Se skiss.jpg i images.
+Jag har tagit inspiration från den officiella kalender sidan men har även skapat en AI version med hjälp av figma. Se skiss.jpg i images.
 
 ## Funktionalitet
-När du öppnar sidan börjar du automatiskt på Index filen vilket innehåller hela kalendern för formel 1 säsongen. Där kan du se när nästa lopp händer, platsen och om loppet har redan skett så ser du vem har slutat i topp-3 platserna.
+När du öppnar sidan börjar du automatiskt på Index filen vilket innehåller hela kalendern för formel 1 säsongen. Där kan du se när nästa lopp händer, platsen och om loppet har redan skett så ser du vem har slutat på topp-3 platserna.
 Sedan kan du navigera till "Standings" vilket tar dig till drivers.html filen som visar hur många poäng alla förare har och vart de ligger. Ovanför tabellen har du möjligheten att byta till teams' standings som visar upp lagets poäng istället.
 
 ## AI-användning
@@ -19,7 +19,7 @@ vilket är ansvarig för att ladda in headern och footer på varje sida iställe
 
 ## Tekniska val (VG)
 I början av projektet valde jag att använda Flexbox för att fixa layouten av kalendern. Tanken var att istället för att skriva 23 stycken divs för varje kort skulle jag använde mig av DOM-manipulation för att skapa alla korten. 
-Jag lyckades inte med och byte istället till en CSS-Grid som är också skriven för hand i index.html och CSS. Däremot så lyckades jag få standings tabellen att bli skriven genom DOM-Manipulationm
+Jag lyckades inte med och byte istället till en CSS-Grid som är också skriven för hand i index.html och CSS. Däremot så lyckades jag få standings tabellen att bli skriven genom DOM-Manipulation
 Istället för att ha allt inom drivers och team html filerna, skapa jag två stycken const arrays med all info om föraren och lagen som sedan skrivs ut genom en for-loop.
 
 ## Bedömning av AI-innehåll (VG)
