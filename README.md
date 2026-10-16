@@ -4,7 +4,7 @@
 Sidan ska vara en typ av "tracker", alltså en sida där du hålla koll på alla/pågående formel 1 loppen och vart alla förare och lag ligger till.
 
 ## Skiss
-Jag har tagit inspiration från formel 1 officiella kalender sida men har även skapat en AI version med hjälp av figma. Se skiss.jpg i images.
+Jag har tagit inspiration från F1 officiella kalender sida men har även skapat en AI version med hjälp av figma. Se skiss.jpg i images.
 
 ## Funktionalitet
 När du öppnar sidan börjar du automatiskt på Index filen vilket innehåller hela kalendern för formel 1 säsongen. Där kan du se när nästa lopp händer, platsen och om loppet har redan skett så ser du vem har slutat i topp-3 platserna.
